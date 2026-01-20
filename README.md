@@ -1,4 +1,34 @@
 Task-02: Image Generation using Stable Diffusion
+Table of Contents
+
+Introduction
+
+Understanding Stable Diffusion
+
+Technology Stack
+
+Environment Setup
+
+Running the Project (Colab & .py Script)
+
+Model Initialization
+
+Text-to-Image Generation
+
+Visualizing Generated Images
+
+Prompt Engineering and Creativity
+
+Performance Optimization
+
+Key Learnings
+
+Conclusion
+
+Reference
+
+Author
+
 Introduction
 
 This project is completed as Task-02 of the ORPHION Internship Program.
@@ -48,6 +78,24 @@ import keras_cv
 from tensorflow import keras
 import matplotlib.pyplot as plt
 
+Running the Project (Colab & .py Script)
+
+The project was originally developed and executed in Google Colab using a GPU runtime.
+After execution, the notebook was downloaded from Colab as a Python (.py) file to allow reuse outside the notebook environment.
+
+To run the project locally using the .py file:
+
+Install the required dependencies using pip
+
+Run the Python script using:
+
+python task_02_image_generation.py
+
+
+The text prompt can be modified directly inside the script to generate different images
+
+This ensures the project can be executed both in Colab and as a standalone Python script.
+
 Model Initialization
 
 The Stable Diffusion model is initialized using KerasCV’s prebuilt implementation, configured to generate images at a resolution of 512×512 pixels.
@@ -62,7 +110,8 @@ By using this model checkpoint, usage is subject to the CreativeML Open RAIL-M L
 
 Text-to-Image Generation
 
-Once the model is loaded, images can be generated directly from a text prompt. The model takes a prompt as input and produces visually rich images that align with the given description.
+Once the model is loaded, images can be generated directly from a text prompt.
+The model takes a prompt as input and produces visually rich images that align with the given description.
 
 images = model.text_to_image(
     "photograph of an astronaut riding a horse",
@@ -84,7 +133,8 @@ plot_images(images)
 
 Prompt Engineering and Creativity
 
-Prompt engineering plays a crucial role in controlling the style, quality, and creativity of generated images. More descriptive prompts tend to produce more detailed and artistic results.
+Prompt engineering plays a crucial role in controlling the style, quality, and creativity of generated images.
+More descriptive prompts tend to produce more detailed and artistic results.
 
 images = model.text_to_image(
     "cute magical flying dog, fantasy art, golden color, "
